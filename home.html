@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payoo home  </title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+  <body class="flex mx-auto p-0 ">
+    
+    <div class="mockup-phone ">
+      <div class="camera"></div>
+      <div class="display p-0">
+        <div class="artboard mt-2 pt-8 phone-3 bg-base-100 p-4 overflow-scroll">
+        <!-- home page -->
+         <div class=" flex justify-between  items-center  ">
+          <div class="flex justify-center items-center ">
+            <img src="fdhhhh.jpg" alt="" class="rounded-[50%] p-0" width="70px" height="70px">
+            <p><span class="text-3xl font-extrabold " id="Cureent_balance">9000</span> <br>
+            Available Balance
+          </p>
+          </div>
+          <button id="logout" class="btn ">Log out <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+         </div>
+         <div class="divider"></div>
+         <h1 class="text-2xl font-bold"><i class="fa-solid fa-paper-plane"></i> Welcome to Payooo!</h1>
+     
+    <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+    <!-- card -->
+<div id="card_container" class="card grid grid-cols-3 gap-3 my-7 ">
+  <div id="card1" class="card border bg-gray-100 p-4 ">
+ <div> <img src="icons8-add-dollar-50.png" alt=""></div>
+   <div> <p>Add Money</p></div>
+  </div>
+  <div id="card2" class="card border bg-gray-100 p-4 ">
+ <div> <img src="./icons8-cash-50.png" alt=""></div>
+   <div> <p>Cashout</p></div>
+  </div>
+  <div id="card3" class="card border bg-gray-100  p-4 ">
+ <div> <img src="./icons8-transfer-money-50.png" alt=""></div>
+   <div> <p>Transfer Money</p></div>
+  </div>
+  <div id="card4" class="card border bg-gray-100 p-4 ">
+ <div> <img src="./icons8-gift-50.png" alt=""></div>
+   <div> <p>Get Bonus</p></div>
+  </div>
+  <div id="card5" class="card border bg-gray-100 p-4 ">
+ <div> <img src="./icons8-paywall-64.png" alt=""></div>
+   <div> <p>Pay Bill</p></div>
+  </div>
+  <div id="card6" class="card border bg-gray-100  p-4 ">
+ <div> <img src="./icons8-add-bookmark-48.png" alt=""></div>
+   <div> <p>Transactions</p></div>
+  </div>
+
+</div>
+
+  <!-- add money form -->
+  <div id="add" class="card bg-base-100 w-full max-w-sm shrink-0 hidden">
+    <h1 class="text-2xl font-bold">Add money</h1>
+    <form class="card-body">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Select A Bank </span>
+        </label>
+        <select id="cars" name="carlist" form="carform" class="border p-4 rounded-xl">
+          <option value="volvo">select bank</option>
+          <option value="saab">Agrani Bank</option>
+          <option value="opel">dach Bangl BAnk</option>
+          <option value="audi">Islamic Bank</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Bank Account Number </span>
+        </label>
+        <input  type="number" placeholder="Enter 11 digit account number" class="input input-bordered" required />
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Amount to Add </span>
+        </label>
+        <input id="AddAmount" type="number" placeholder="Add Amount to withdraw" class="input input-bordered" required />
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text"> 4 Digit Pin</span>
+        </label>
+        <input id="addpin" type="number" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+  
+      </div>
+      <div class="form-control mt-6">
+        <button id="addmoney" class="btn btn-primary">Add Money</button>
+      </div>
+    </form>
+  </div>
+  <!-- add money form end  -->
+
+  <!-- cash out start  -->
+  <div id="out" class="card bg-base-100 w-full max-w-sm shrink-0 hidden">
+    <h1 class="text-2xl font-bold">Cash Out</h1>
+    <form class="card-body">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Agent Number </span>
+        </label>
+        <input  type="number" placeholder="Enter 11 digit  number" class="input input-bordered" required />
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Amount </span>
+        </label>
+        <input id="outAmount" type="number" placeholder="Enter amount to withdraw" class="input input-bordered" required />
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text"> 4 Digit Pin</span>
+        </label>
+        <input id="outpin" type="number" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+  
+      </div>
+      <div class="form-control mt-6">
+        <button id="outmoney" class="btn btn-primary">Cash Out </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- cash out end  -->
+   <!-- transfer start -->
+   <div id="trans" class="card bg-base-100 w-full max-w-sm shrink-0  hidden">
+    <h1 class="text-2xl font-bold">Transfer Money</h1>
+    <form class="card-body">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">User Account Number </span>
+        </label>
+        <input  type="number" placeholder="Enter 11 digit  number" class="input input-bordered" required />
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Amount </span>
+        </label>
+        <input id="transAmount" type="number" placeholder="Enter amount to withdraw" class="input input-bordered" required />
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text"> 4 Digit Pin</span>
+        </label>
+        <input id="transpin" type="number" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+  
+      </div>
+      <div class="form-control mt-6">
+        <button id="transmoney" class="btn btn-primary">Send Now </button>
+      </div>
+    </form>
+  </div>
+
+   <!-- transfer end  -->
+   <!-- get bonus start -->
+   <div id="bonus" class="card bg-base-100 w-full max-w-sm shrink-0 hidden ">
+    <h1 class="text-2xl font-bold">Get BonusGet Bonus</h1>
+    <form class="card-body">
+     <div class="form-control">
+        <label class="label">
+          <span class="label-text"> Enter Bonus Coupon</span>
+        </label>
+        <input id="Bonuspin" type="number" placeholder="Enter your coupon" class="input input-bordered" required />
+  
+      </div>
+      <div class="form-control mt-6">
+        <button id="Bonusmoney" class="btn btn-primary">Get Bonus </button>
+      </div>
+    </form>
+  </div>
+
+   <!-- get bunos end  -->
+  <!-- pay bill form -->
+  <div id="bill" class="card bg-base-100 w-full max-w-sm shrink-0  hidden">
+    <h1 class="text-2xl font-bold">Select To Pay</h1>
+    <form class="card-body">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Select One</span>
+        </label>
+        <select id="cars" name="carlist" form="carform" class="border p-4 rounded-xl">
+          <option value="volvo">select </option>
+          <option value="saab">Electricity</option>
+          <option value="opel">Wifi</option>
+          <option value="audi">Gas</option>
+          <option value="opel">Water</option>
+          <option value="audi">Internet</option>
+        </select>
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Biller Account Number </span>
+        </label>
+        <input  type="number" placeholder="Enter account number" class="input input-bordered" required />
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Amount to Pay </span>
+        </label>
+        <input id="payAmount" type="number" placeholder="Add Amount to pay" class="input input-bordered" required />
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text"> 4 Digit Pin</span>
+        </label>
+        <input id="paypin" type="number" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+  
+      </div>
+      <div class="form-control mt-6">
+        <button id="paymoney" class="btn btn-primary">Pay Now</button>
+      </div>
+    </form>
+  </div>
+  <!-- psybill form end  -->
+
+     <!-- transaction history  start -->
+     <div id="his" class="card bg-base-100 w-full max-w-sm shrink-0  hidden">
+      <h1 class="text-2xl font-bold">Transaction History :</h1>
+      <div class="divider"></div>
+  <div id="transactionhistory">
+
+
+  </div>
+    </div>
+  
+     <!-- transaction end  -->
+  
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
+   
+<script src="home.js"></script>
+
+</body>
+</html>
